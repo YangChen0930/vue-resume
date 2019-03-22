@@ -100,6 +100,7 @@ export default {
   .resumeEditor ul> li::before{
     content: '•';
     margin-right: .5em;
+    float: left;
   }
   .resumeEditor ol {
     counter-reset: section;
@@ -124,17 +125,28 @@ export default {
   技能
   ----
 
-  * 百分百还原设计稿(html+css)
+  * 开发过项目类型：PC端 + 移动端、混合app
+  * 使用过前端技术 ： HTML5、CSS3、Flex、原生JS、jquery、Vue、小程序、NodeJS
+  * 使用过的技术栈：Vue + Vuex +Vue-Router +Axios + Stylus +ES6 +Webpack + Babel
   * 前后端分离
   * 响应式开发布局
-  * 前端框架(vue,还会一点react)
-  * 开发者工具(webpack)
+  * 前端工程化开发，深入理解git/SVN版本管理工具
+  * 前端框架(vue,react)，实现前端单页面应用状态管理及路由机制
 
   工作经历
   ----
 
   1. 江苏舜天国际集团江都工具有限公司
   2. 江苏智途科技过分有限公司
+
+  项目经历
+  ----
+
+  教育经历
+  ----
+
+  2012.09 -- 2016.06
+  徐州工程学院 | 信息与计算科学（统计与精算）| 本科
 
   链接
   ----
