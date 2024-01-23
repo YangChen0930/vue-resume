@@ -1,22 +1,25 @@
 <template>
-  <div class="resumeEditor"
-       :class="{htmlMode:enableHtml}"
-       ref="container">
-    <div v-if="enableHtml"
-         v-html="result"></div>
-    <pre v-else>{{result}}</pre>
+  <div class="resumeEditor" :class="{ htmlMode: enableHtml }" ref="container">
+    <div v-if="enableHtml" v-html="result"></div>
+    <pre v-else>{{ result }}</pre>
   </div>
 </template>
 
 <script>
-import marked from 'marked'
+import MarkdownIt from 'markdown-it'
 export default {
   props: ['markdown', 'enableHtml'],
   name: 'ResumeEditor',
   computed: {
     result: function () {
-      return this.enableHtml ? marked(this.markdown) : this.markdown
+      return this.enableHtml ? this.md.render(this.markdown) : this.markdown
     }
+  },
+  created() {
+    this.md = new MarkdownIt({
+      html: true,
+      linkify: true
+    })
   },
   methods: {
     goBottom: function () {
@@ -27,7 +30,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>

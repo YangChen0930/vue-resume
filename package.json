@@ -11,7 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "marked": "^0.6.1",
+    "markdown-it": "^14.0.0",
     "prismjs": "^1.15.0",
     "vue": "^2.5.2"
   },
